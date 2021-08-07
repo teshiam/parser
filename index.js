@@ -33,6 +33,7 @@ app.get('/', (req, res) => {
         xml += end
         res.set('Content-Type', 'application/rss+xml');
         res.send(xml);
+    })();
 })
 
 const PORT = process.env.PORT || 3000;
