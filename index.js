@@ -22,7 +22,7 @@ app.get('/', (req, res) => {
         var end = '</channel></rss>'
 
         feed.items.forEach(item => {
-            var feedItem = '<item><title>'+item.title+'</title><link>'+item.link+'</link> <description>'+item['content:encoded'].replace("<![CDATA[", "").replace("]]", "")+'</description><guid isPermaLink="false">'+item.guid+'</guid><pubDate>'+item.pubDate+'</pubDate><content:encoded>'+item['content:encoded'].replace("<![CDATA[", "").replace("]]", "")+'</content:encoded></item>'
+            var feedItem = '<item><title>'+item.title+'</title><link>'+item.link+'</link><description>'+item['content:encoded'].replace("<![CDATA[", "").replace("]]", "")+'</description><guid>'+item.guid+'</guid><pubDate>'+item.pubDate+'</pubDate><content:encoded>'+item['content:encoded'].replace("<![CDATA[", "").replace("]]", "")+'</content:encoded></item>'
             feedItems.push(feedItem);
         })
 
